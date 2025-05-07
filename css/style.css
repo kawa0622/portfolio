@@ -199,6 +199,9 @@ img {
 /*--------------------------------
  Skill
 ---------------------------------*/
+.skill {
+  background-color: #f9f7f0;
+}
 .skill-list {
   display: flex;
   flex-wrap: wrap;
@@ -222,6 +225,7 @@ img {
 
 .skill-body {
   flex: 1;
+  background-color: ;
 }
 
 .skill-name {
