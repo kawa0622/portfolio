@@ -140,11 +140,13 @@ img {
  メインビジュアル
 ---------------------------------*/
 .mv {
-  display: flex;
+  display: ;
   align-items: center;
   justify-content: center;
   height: auto;
-  text-align: center;
+  text-align: left;
+  background-color: #f9f7f0;
+  padding-left: 50px;
 }
 
 .mv-container {
@@ -153,9 +155,41 @@ img {
 }
 
 .mv-container img {
-  width: 100%;
-  height: auto;
+  display: block;
+      margin-left: 5%;
+      margin-right: auto;
 }
+
+/*--------------------------------
+ About
+---------------------------------*/
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.profile-img {
+  width: 20%;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+.profile-img img {
+  border-radius: 50%;
+}
+.profile-body {
+  flex: 1;
+}
+
+.profile-body p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.profile-body p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 
 /*--------------------------------
  Works
@@ -237,35 +271,6 @@ img {
   line-height: 1.8;
 }
 
-/*--------------------------------
- About
----------------------------------*/
-.profile {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.profile-img {
-  width: 20%;
-  margin-right: 30px;
-  border-radius: 50%;
-}
-.profile-img img {
-  border-radius: 50%;
-}
-.profile-body {
-  flex: 1;
-}
-
-.profile-body p {
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-.profile-body p:not(:last-child) {
-  margin-bottom: 30px;
-}
 
 /*--------------------------------
  Contact
