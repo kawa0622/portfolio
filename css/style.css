@@ -3,6 +3,7 @@ body {
   font-size: 15px;
   letter-spacing: .05em;
   color: #333;
+  background-color: #f9f7f0;
 }
 
 a {
@@ -57,7 +58,7 @@ img {
   font-weight: bold;
   line-height: 1;
   margin-bottom: 40px;
-  text-align: center;
+;
   letter-spacing: .05em;
   color: #333;
 }
@@ -140,13 +141,14 @@ img {
  メインビジュアル
 ---------------------------------*/
 .mv {
-  display: ;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  align-items: left;
+  justify-content: left;
   height: auto;
   text-align: left;
   background-color: #f9f7f0;
   padding-left: 50px;
+  margin-left: 50px;
 }
 
 .mv-container {
@@ -163,6 +165,32 @@ img {
 /*--------------------------------
  About
 ---------------------------------*/
+.about-section {
+  display: flex;
+  justify-content: center; /* 中央に配置 */
+  padding: 0px 20px;
+  background-color: #f9f7f0;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1000px;
+  width: 100%;
+}
+.about-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+.right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1; /* 残りのスペースを占める */
+}
+
+
 .profile {
   display: flex;
   flex-wrap: wrap;
@@ -170,12 +198,16 @@ img {
   margin: 0 auto;
 }
 .profile-img {
-  width: 20%;
+  flex-shrink: 1; 
+  margin-top: 0;
+  padding-top: 20px;
   margin-right: 30px;
-  border-radius: 50%;
+  margin-top: 50px;
 }
 .profile-img img {
-  border-radius: 50%;
+  width: 200px; /* 適宜調整 */
+  height: auto;
+  display: block;
 }
 .profile-body {
   flex: 1;
@@ -189,15 +221,62 @@ img {
 .profile-body p:not(:last-child) {
   margin-bottom: 30px;
 }
+.designer-info {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  gap: 10px;
+}
 
+.red-line {
+  width: 4px;
+  height: 2.2em; /* 約2行分の高さ */
+  background-color: red;
+}
+
+.designer-text {
+  font-size: 10px;
+  line-height: 1.4;
+  color: #333;
+}
 
 /*--------------------------------
  Works
 ---------------------------------*/
+.works-title-img {
+  width: 30px;
+  height: auto;
+  display: block;
+  margin-left: 20px; /* ← これで右に寄せる */
+  margin-top: 20px;
+}
+.works-wrapper {
+  display: flex;
+  align-items: flex-start; /* 上端揃え */
+  gap: 0px; /* SVGとセクションの間隔 */
+  max-width: 1000px; justify-content: center; /* 中央に配置 */
+}
+
+.left {
+  margin: 0;
+  padding: 70px 0 0 0;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0; /* サイズを縮めない */
+  background-color: #f9f7f0;
+}
+
+.left svg {
+  display: block;
+  height: auto;
+}
+
 .works-list {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -40px;
+  background-color: #f9f7f0;
 }
 
 .works-item {
@@ -270,6 +349,7 @@ img {
   font-size: 14px;
   line-height: 1.8;
 }
+
 
 
 /*--------------------------------
