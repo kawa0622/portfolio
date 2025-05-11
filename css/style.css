@@ -45,10 +45,10 @@ img {
 }
 
 .container {
-  max-width: 1340px;
-  margin: 0 auto;
-  padding: 0 40px;
+  padding: 0;
+  margin: 0;
 }
+
 
 /*--------------------------------
  見出し
@@ -147,8 +147,8 @@ img {
   height: auto;
   text-align: left;
   background-color: #f9f7f0;
-  padding-left: 50px;
-  margin-left: 50px;
+  padding-left: 80px;
+  margin-left: 20px;
 }
 
 .mv-container {
@@ -167,8 +167,11 @@ img {
 ---------------------------------*/
 .about-section {
   display: flex;
-  justify-content: center; /* 中央に配置 */
-  padding: 0px 20px;
+  justify-content: center;
+   padding-left: 10px;
+   margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 0px 10px;
   background-color: #f9f7f0;
 }
 
@@ -243,49 +246,61 @@ img {
 /*--------------------------------
  Works
 ---------------------------------*/
+/* 左の画像 */
 .works-title-img {
-  width: 30px;
+  width: 50px; /* 適度なサイズに調整 */
   height: auto;
-  display: block;
-  margin-left: 20px; /* ← これで右に寄せる */
   margin-top: 20px;
 }
 .works-wrapper {
   display: flex;
-  align-items: flex-start; /* 上端揃え */
-  gap: 0px; /* SVGとセクションの間隔 */
-  max-width: 1000px; justify-content: center; /* 中央に配置 */
+  align-items: flex-start;
+  background-color: #f9f7f0;
+  max-width: 1200px; /* 余裕をもって */
+  margin: 0 auto; /* 中央寄せ */
+  padding: 20px 20px;
+  gap: 40px;
+  flex-wrap: wrap; /* レスポンシブ対応 */
 }
 
 .left {
   margin: 0;
-  padding: 70px 0 0 0;
   line-height: 1;
   display: flex;
   align-items: flex-start;
   flex-shrink: 0; /* サイズを縮めない */
-  background-color: #f9f7f0;
 }
 
 .left svg {
   display: block;
   height: auto;
 }
-
+/* worksセクション */
+.works.section {
+  flex: 1;
+ display: flex;
+  justify-content: center; /* ← 右側の内容を中央寄せ */
+}
+/* 作品一覧のリスト */
+.works-item {
+  flex: 0 1 calc((100% - 80px) / 3);
+  box-sizing: border-box;
+  color: #333;
+  max-width: 300px; /* 最大幅を設定 */
+  margin: 0 auto;
+}
 .works-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: -40px;
-  background-color: #f9f7f0;
+  gap: 40px; /* 上下・左右の間隔 */
+  justify-content: flex-start;
 }
-
-.works-item {
-  width: 31.74603%;
-  margin-right: 1.58730%;
-  margin-bottom: 40px;
-  color: #333;
+.works-title-img {
+  width: 40px;        /* ← ここで固定サイズに */
+  height: auto;
+  display: block;
+  margin-top: 20px;
 }
-
 .works-item:hover {
   opacity: .9;
 }
@@ -295,7 +310,11 @@ img {
 }
 
 .works-img img {
+ width: 100%;           /* 親要素にフィット */
+  max-width: 100%;       /* 最大幅を制限 */
+  height: auto;
   border: 1px solid #e6e6e6;
+  display: block;
 }
 
 .works-name {
@@ -308,26 +327,78 @@ img {
   font-size: 10px;
   margin-top: 5px;
 }
+/* スマホ対応（768px以下で1列 or 2列） */
+@media screen and (max-width: 768px) {
+  .works-wrapper {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .works.section {
+    max-width: 100%;
+  }
+
+  .works-list {
+    justify-content: center;
+  }
+
+  .works-item {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+
+  .works-title-img {
+    margin: 0 auto 20px;
+  }
+}
 
 /*--------------------------------
  Skill
 ---------------------------------*/
-.skill {
-  background-color: #f9f7f0;
-}
-.skill-list {
+
+.skill-wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: -50px;
+   max-width: 1200px; /* 余裕をもって */
+  margin: 0 auto; /* 中央寄せ */
+  padding-left: 20px;
+  align-items: flex-start; /* ← 行頭揃え */
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.skill-title-side {
+  flex-shrink: 0;          /* 縮小しない */
+  margin-right: 10px;      /* 右側に余白を追加 */
+   margin-top: 0; /* 高さ揃えのため */
+}
+.skill-title-img {
+  width: 40px;             /* 固定サイズ（例：60px） */
+  height: auto;
+  display: block;
 }
 
+
+.skill-title-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+/* works-list と似た2〜3列レイアウトに */
+.skill-list {
+ display: flex;
+  flex-wrap: wrap;
+  gap: 40px 20px;
+  flex: 1; /* 残りのスペースを使う */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* skill-item を works-item に似せる */
 .skill-item {
+   width: 48%;
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  width: 48%;
-  margin-bottom: 50px;
+  gap: 10px;
 }
 
 .skill-img {
