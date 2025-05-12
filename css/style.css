@@ -142,13 +142,13 @@ img {
 ---------------------------------*/
 .mv {
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: flex-start; /* "left" は無効な値です */
+  justify-content: flex-start; /* 同様に修正 */
   height: auto;
   text-align: left;
   background-color: #f9f7f0;
   padding-left: 80px;
-  margin-left: 20px;
+  /* margin-left: 20px; ← 削除 */
 }
 
 .mv-container {
@@ -158,7 +158,7 @@ img {
 
 .mv-container img {
   display: block;
-      margin-left: 5%;
+      margin-left: 10%;
       margin-right: auto;
 }
 
