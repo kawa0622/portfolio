@@ -37,7 +37,7 @@ img {
 }
 
 .section {
-  padding: 90px 0;
+  padding: 60px 0;
 }
 
 .section:nth-of-type(odd) {
@@ -169,8 +169,8 @@ img {
   display: flex;
   justify-content: center;
    padding-left: 10px;
-   margin-top: 20px;
-  margin-bottom: 30px;
+   margin-top: 10px;
+  margin-bottom: 80px;
   padding: 0px 10px;
   background-color: #f9f7f0;
 }
@@ -426,8 +426,18 @@ img {
 /*--------------------------------
  Contact
 ---------------------------------*/
+.contact-list a {
+    margin-right: 20px; /* 間隔の調整 */
+    display: inline-block;
+  }
+  
+
+  .contact-list a:last-child {
+    margin-right: 0; /* 最後の要素に余分なマージンをつけない */
+  }
 .contact {
   text-align: center;
+ padding: 30px 0 !important;
 }
 
 .contact-item:not(:last-child) {
@@ -435,7 +445,7 @@ img {
 }
 
 .contact-text {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 /*--------------------------------
  ページトップ
