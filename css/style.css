@@ -761,6 +761,7 @@ input[type="text"] {
 /*--------------------------------
  下層：Worksページ
 ---------------------------------*/
+
 .content {
   background-color: #ffffff;
 }
@@ -821,7 +822,19 @@ input[type="text"] {
 .home-link {
   text-align: center;
 }
+.article-flex {
+  display: flex;
+  gap: 20px; /* 間隔を調整 */
+}
 
+.article-body, .article-side {
+  flex: 1;
+}
+
+.article-side img {
+  max-width: 100%;
+  height: auto;
+}
 /*media Queries 767
 ----------------------------------------------------*/
 @media screen and (max-width: 767px) {
@@ -994,3 +1007,11 @@ input[type="text"] {
     margin-bottom: 20px;
   }
 }
+
+
+
+
+
+
+
+
