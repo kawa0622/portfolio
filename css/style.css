@@ -781,7 +781,7 @@ input[type="text"] {
 }
 
 .article-body {
-  max-width: 720px;
+  width: 900px;
   margin: 0 auto;
   margin-bottom: 80px;
 }
@@ -794,7 +794,7 @@ input[type="text"] {
 }
 
 .article-body img {
-  width: 100%;
+  width: 150%;
   height: auto;
 }
 
@@ -832,7 +832,7 @@ input[type="text"] {
 }
 
 .article-side img {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
 }
 /*media Queries 767
