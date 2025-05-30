@@ -19,16 +19,6 @@ img {
   border-style: none;
 }
 
-
-
-.pc-only {
-  display: block;
-}
-
-.sp-only {
-  display: none;
-}
-
 /*--------------------------------
  レイアウト
 ---------------------------------*/
@@ -142,13 +132,12 @@ img {
 ---------------------------------*/
 .mv {
   display: flex;
-  align-items: flex-start; /* "left" は無効な値です */
-  justify-content: flex-start; /* 同様に修正 */
+  align-items: flex-start; 
+  justify-content: flex-start; 
   height: auto;
   text-align: left;
   background-color: #f9f7f0;
   padding-left: 80px;
-  /* margin-left: 20px; ← 削除 */
 }
 
 .mv-container {
@@ -161,6 +150,8 @@ img {
       margin-left: 10%;
       margin-right: auto;
 }
+
+
 
 /*--------------------------------
  About
@@ -205,12 +196,19 @@ img {
   margin-top: 0;
   padding-top: 20px;
   margin-right: 30px;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 .profile-img img {
   width: 200px; /* 適宜調整 */
   height: auto;
   display: block;
+   order: 1;
+  flex: 1; /* 左の幅調整 */
+  
+}
+.right-content {
+  order: 2;
+  flex: 1; /* 右の幅調整 */
 }
 .profile-body {
   flex: 1;
@@ -242,117 +240,220 @@ img {
   line-height: 1.4;
   color: #333;
 }
+/* モバイル時の切り替え */
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-wrap: wrap;
+    flex-direction: column; /* 縦積みにする */
+  }
 
-/*--------------------------------
- Works
----------------------------------*/
-/* 左の画像 */
-.works-title-img {
-  width: 50px; /* 適度なサイズに調整 */
-  height: auto;
-  margin-top: 20px;
+  /* profile-imgを先に */
+  .profile-img {
+    order: 1;
+    width: 100%;
+  }
+
+  /* right-contentをprofile-imgの後に */
+  .right-content {
+    order: 2;
+    width: 100%;
+  }
+  .right-content{padding: 20px;}
 }
+/*--------------------------------
+  Works
+---------------------------------*/
+/* works-title-img の共通スタイル */
+/* こちらで基本的なサイズやマージンを設定し、displayは各クラスで制御します */
+.works-title-img {
+    height: auto;
+    margin-top: 20px; /* デフォルトの上下マージン */
+}
+
+/* デスクトップ用画像のデフォルトサイズ */
+.works-title-img.desktop-only {
+    width: 50px; /* デスクトップでのサイズ */
+}
+
+/* モバイル用画像のデフォルトサイズ (ここではマージンは設定しない) */
+.works-title-img.mobile-only {
+    width: 40px; /* モバイルでのデフォルトサイズ（メディアクエリで上書き） */
+    /* ここから margin-left: auto; margin-right: auto; を削除します！ */
+}
+
+
 .works-wrapper {
-  display: flex;
-  align-items: flex-start;
-  background-color: #f9f7f0;
-  max-width: 1200px; /* 余裕をもって */
-  margin: 0 auto; /* 中央寄せ */
-  padding: 20px 20px;
-  gap: 40px;
-  flex-wrap: wrap; /* レスポンシブ対応 */
+    display: flex;
+    align-items: flex-start;
+    background-color: #f9f7f0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .left {
-  margin: 0;
-  line-height: 1;
-  display: flex;
-  align-items: flex-start;
-  flex-shrink: 0; /* サイズを縮めない */
+    margin: 0;
+    line-height: 1;
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
 }
 
 .left svg {
-  display: block;
-  height: auto;
+    display: block;
+    height: auto;
 }
-/* worksセクション */
+
 .works.section {
-  flex: 1;
- display: flex;
-  justify-content: center; /* ← 右側の内容を中央寄せ */
+    flex: 1; /* PC表示ではこのままでOK */
+    display: flex; /* PC表示ではこのままでOK */
+    justify-content: center; /* PC表示ではこのままでOK */
 }
-/* 作品一覧のリスト */
+
+/* 既存の .works-item, .works-list, .works-img img などのスタイルはそのまま活用します */
 .works-item {
-  flex: 0 1 calc((100% - 80px) / 3);
-  box-sizing: border-box;
-  color: #333;
-  max-width: 300px; /* 最大幅を設定 */
-  margin: 0 auto;
+    flex: 0 1 calc((100% - 80px) / 3);
+    box-sizing: border-box;
+    color: #333;
+    max-width: 300px;
+    margin: 0 auto;
 }
 .works-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px; /* 上下・左右の間隔 */
-  justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: flex-start;
 }
-.works-title-img {
-  width: 40px;        /* ← ここで固定サイズに */
-  height: auto;
-  display: block;
-  margin-top: 20px;
-}
+
 .works-item:hover {
-  opacity: .9;
+    opacity: .9;
 }
 
 .works-item:nth-of-type(3n) {
-  margin-right: 0;
+    margin-right: 0;
 }
 
 .works-img img {
- width: 100%;           /* 親要素にフィット */
-  max-width: 100%;       /* 最大幅を制限 */
-  height: auto;
-  border: 1px solid #e6e6e6;
-  display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #e6e6e6;
+    display: block;
 }
 
 .works-name {
-  font-size: 12px;
-  font-weight: bold;
-  margin-top: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 8px;
 }
 
 .works-info {
-  font-size: 10px;
-  margin-top: 5px;
-}
-/* スマホ対応（768px以下で1列 or 2列） */
-@media screen and (max-width: 768px) {
-  .works-wrapper {
-    flex-direction: column;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .works.section {
-    max-width: 100%;
-  }
-
-  .works-list {
-    justify-content: center;
-  }
-
-  .works-item {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-
-  .works-title-img {
-    margin: 0 auto 20px;
-  }
+    font-size: 10px;
+    margin-top: 5px;
 }
 
+
+/* --- ここからメディアクエリ内の設定 --- */
+
+/* --- モバイル表示時のスタイル調整（767px以下）--- */
+@media screen and (max-width: 767px) {
+    /* works.section の調整 (コンテンツ全体が表示されるように) */
+    .works.section {
+        flex: unset; /* PCのflex:1;をリセット */
+        display: flex; /* h1とcontainerを縦に並べるためにflexを使用 */
+        flex-direction: column; /* 縦並びにする */
+        align-items: center; /* セクション内のh1とcontainerを中央寄せにする */
+        max-width: 100%;
+        /* padding は .container で制御されているので、ここでは不要か調整 */
+        /* padding: 0 20px; */
+        box-sizing: border-box;
+    }
+
+    /* h1.left の調整 (モバイルタイトル画像の親要素) */
+    .left {
+        display: flex; /* 引き続きフレックスコンテナ */
+        justify-content: flex-start; /* **画像を左寄せにするために変更！** */
+        align-items: flex-start;
+        width: 100%; /* 親の幅いっぱいに広げ、その中で画像を左寄せにする */
+        margin: 0; /* 親要素h1の不要なマージンをリセット */
+    }
+
+    /* mobile-only 画像の最終的なスタイル */
+    .works-title-img.mobile-only {
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        /* **画像を左寄せにするために変更！** */
+        margin-left: 0; /* 左寄せ */
+        margin-right: auto; /* 右側は自動調整 */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* desktop-only 画像はモバイルでは確実に非表示 */
+    .works-title-img.desktop-only {
+        display: none !important;
+    }
+
+    /* 作品一覧 (.works-list) の調整 */
+    .works-list {
+        justify-content: center; /* **中央寄せにする** */
+        gap: 30px;
+        width: 100%; /* 親要素（.container）の幅いっぱいに広げる */
+        max-width: 600px; /* 作品リスト全体の最大幅を設定 (調整可能) */
+        padding: 0; /* .container でパディングが制御されていることを想定 */
+        margin: 20px auto; /* 上下のマージンと中央寄せ */
+        box-sizing: border-box;
+    }
+
+    /* 各作品アイテム (.works-item) の調整 */
+    /* これがモバイルで大きく表示され、中央寄せになるための最も重要な変更 */
+    .works-item {
+        flex: 0 1 100%; /* **モバイルでは1列表示で親要素の幅を占める** */
+        max-width: 400px; /* **各アイテムの最大幅を広げる（ここでサイズを調整）** */
+        margin: 0 auto 30px; /* **中央寄せとアイテム間の下マージン** */
+        box-sizing: border-box;
+    }
+    .works-item:last-child {
+        margin-bottom: 0; /* 最後のアイテムの下マージンは不要 */
+    }
+}
+
+/* --- PC表示時のスタイル調整（768px以上）--- */
+@media screen and (min-width: 768px) {
+    /* PC表示時はdesktop-only画像を表示 */
+    .works-title-img.desktop-only {
+        display: block !important;
+        width: 50px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    /* PC表示時はmobile-only画像を確実に非表示 */
+    .works-title-img.mobile-only {
+        display: none !important;
+    }
+
+    /* PC表示時の .left のスタイル */
+    .left {
+        display: flex;
+        justify-content: center; /* 子要素を中央寄せ */
+        align-items: flex-start;
+    }
+
+    /* PC表示時の works.section のスタイル */
+    .works.section {
+        flex: 1; /* PCで元のflex:1; を残す場合 */
+        display: flex;
+        justify-content: center;
+    }
+    /* PC表示時の .works-list や .works-item は既存のグローバル定義（3列表示など）が適用されるはず */
+}
 /*--------------------------------
  Skill
 ---------------------------------*/
@@ -837,17 +938,10 @@ input[type="text"] {
 }
 /*media Queries 767
 ----------------------------------------------------*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px)
+ {
   body {
     font-size: 14px;
-  }
-
-  .pc-only {
-    display: none;
-  }
-
-  .sp-only {
-    display: block;
   }
 
   /* 見出し */
@@ -900,6 +994,7 @@ input[type="text"] {
   /*  メインビジュアル */
   .mv {
     height: 40vh;
+    padding: 0;
   }
 
   .mv-container {
