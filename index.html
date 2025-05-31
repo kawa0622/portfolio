@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -36,14 +36,10 @@
     </header>
     <!-- /header -->
 
-    <main class="content">
-
-      <!-- mv -->
-      <main class="mv">
-        <div class="mv-container">
-          <img src="img/top.jpg"  alt="メイン画像">
+     <main class="content"> <section class="mv"> <div class="mv-container">
+          <img src="img/top.jpg" alt="メイン画像">
         </div>
-      </div>
+      </section> 
       <!-- /mv -->
 
       <!-- about -->
@@ -89,15 +85,16 @@
 
 
       <!-- works -->
-      <div class="works-wrapper">
-       <section class="works section" id="works">
-       <h1 class="left">
-  <img src="img/works/works-title.jpg" alt="WORKS" class="works-title-img desktop-only">
-  <img src="img/works2.jpg" alt="WORKS" class="works-title-img mobile-only">
-</h1>
+<div class="works-wrapper">
+    
+    <div class="works-title-side">
+        <img src="img/works/works-title.jpg" alt="WORKS" class="works-title-img desktop-only">
+        <img src="img/works2.jpg" alt="WORKS" class="works-title-img mobile-only">
+    </div>
 
-          <div class="container">
-              <div class="works-list">
+    <div class="works-content-container">
+        <section class="works section" id="works">
+            <div class="works-list">
              
                 <a class="works-item" href="works-1.html">
                 <div class="works-img"><img src="img/works/samurai_uni_top.png" alt="WordPress2" /></div>
@@ -132,8 +129,12 @@
               
               
             </div>
-          </div>
+          </div> </div>
+
         </section>
+    </div>
+
+</div>
       </div>
       <!-- /works -->
 
@@ -142,8 +143,9 @@
   <div class="container">
      <div class="skill-wrapper">
       <div class="skill-title-side">
-        <img src="img/skills/skill.jpg" alt="SKILL" class="skill-title-img">
-      </div>
+    <img src="img/skills/skill.jpg" alt="SKILL" class="skill-title-img desktop-only">
+    <img src="img/skill.jpg" alt="SKILL" class="skill-title-img mobile-only">
+</div>
        <!-- 左側：スキルリスト -->
       <div class="skill-list">
         <div class="skill-item">
@@ -212,23 +214,15 @@
             </a>
           </div>
         </div>
-      </section>
-      <!-- /contact -->
+       </section> </main> <div class="page-top" id="js-page-top">
+        <img src="img/toppage.png" alt="ページトップへ" class="page-top-img">
+    </div>
 
-      <div class="page-top" id="js-page-top">
-        <span class="material-icons-outlined">expand_less</span>
-      </div>
-    </main>
+    <footer class="footer">
+        <div class="copyright">&copy;KAWA Works</div>
+    </footer>
+    </div> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type='text/javascript' src="js/script.js"></script>
 
-    <!-- footer -->
-   <footer class="footer">
- 
-  <div class="copyright">&copy;KAWA Works</div>
-</footer>
-    <!-- /footer -->
-
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script type='text/javascript' src="js/script.js"></script>
 </body>
 </html>
