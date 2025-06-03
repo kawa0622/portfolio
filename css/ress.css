@@ -281,3 +281,59 @@ progress {
 [aria-disabled] {
   cursor: default;
 }
+/* PC表示時の主要なスタイル（広めの画面用） */
+@media screen and (min-width: 1201px) {
+    /* ここに、現状の .works-item { flex: 0 1 calc((100% - 80px) / 3); } など、
+       広い画面で3列表示などを想定したスタイルを記述します。 */
+    .works-item {
+        flex: 0 1 calc((100% - 80px) / 3); /* 3列表示 */
+        /* ... その他、広めのPC画面用のスタイル ... */
+    }
+    .about-container {
+        /* 広いPC画面用のレイアウト */
+        max-width: 1000px;
+        gap: 40px;
+    }
+    .profile-img {
+        margin-top: 150px;
+    }
+    /* ... 広い画面用コンテンツのmax-widthやpaddingなど ... */
+}
+
+/* 中間のPC画面サイズ（例: 769px から 1200px）用 */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    /* ここに、画面が半分になったときに崩れないように調整するスタイルを記述します。 */
+    /* 例えば、works-item を2列にする、Aboutセクションのgapを調整するなど。 */
+
+    .works-item {
+        flex: 0 1 calc((100% - 40px) / 2); /* 2列表示にする場合 (gap 40px) */
+        /* または、幅を少し小さくして3列を維持するなど、調整 */
+    }
+
+    .about-container {
+        /* 中間幅PC画面用のレイアウト */
+        flex-direction: row; /* 横並びは維持 */
+        flex-wrap: wrap; /* 必要なら折り返す */
+        gap: 20px; /* 間隔を少し詰める */
+        max-width: 900px; /* 少し狭くする */
+    }
+    .profile-img {
+        /* 画像の位置を調整 */
+        margin-top: 50px; /* 縦方向のスペースを削減 */
+        margin-right: 20px;
+    }
+    /* ページの左右のパディングを調整することも有効 */
+    .container {
+        padding: 0 20px; /* ヘッダーやフッターの左右パディング */
+    }
+    .article-container {
+        max-width: 900px; /* Works詳細ページのコンテンツ幅を調整 */
+    }
+    /* 他のセクションも同様に調整 */
+}
+
+/* モバイル表示時のスタイル（〜768px） */
+@media screen and (max-width: 768px) {
+    /* ここに、これまでのモバイル用CSSが入ります */
+    /* ... 既存のモバイル用スタイル ... */
+}
