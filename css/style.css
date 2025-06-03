@@ -1,199 +1,180 @@
-
+/* ====================================================== */
+/* 基本設定・汎用スタイル */
+/* ====================================================== */
 body {
-  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
-  font-size: 15px;
-  letter-spacing: .05em;
-  color: #333;
-  background-color: #f9f7f0;
+    font-family: "Montserrat", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    font-size: 15px;
+    letter-spacing: .05em;
+    color: #333;
+    background-color: #f9f7f0;
 }
 
 a {
-  transition: opacity .3s;
-  text-decoration: none;
-  color: #1ca9e3;
+    transition: opacity .3s;
+    text-decoration: none;
+    color: #1ca9e3;
 }
 
+/* imgタグの基本スタイル（グローバルなリセット） */
 img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: bottom;
-  border-style: none;
+    max-width: 100%; /* 親要素からはみ出さないように */
+    height: auto; /* 縦横比を維持 */
+    vertical-align: bottom; /* 下の余白をなくす（古いブラウザ対策） */
+    border-style: none; /* リンク画像で表示される枠線をなくす */
 }
 
-/*--------------------------------
- レイアウト
----------------------------------*/
+/* ====================================================== */
+/* レイアウト */
+/* ====================================================== */
 .wrapper {
-  padding-top: 73px;
+    padding-top: 73px; /* ヘッダーの高さ分 */
 }
 
 .section {
-  padding: 60px 0;
+    padding: 60px 0;
 }
 
 .section:nth-of-type(odd) {
-  background-color: #f9f7f0;
+    background-color: #f9f7f0;
 }
 
 .container {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
-/*--------------------------------
- 見出し
----------------------------------*/
+/* ====================================================== */
+/* 見出し */
+/* ====================================================== */
 .title {
-  font-size: 34px;
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: 40px;
-  letter-spacing: .05em;
-  color: #333;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 40px;
+    letter-spacing: .05em;
+    color: #333;
 }
 
 .lead {
-  font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
 }
 
-/*--------------------------------
-ヘッダー
----------------------------------*/
+.lead a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+p.lead a:visited {
+    color: #990099;
+}
+
+.lead a:hover {
+    text-decoration: underline;
+}
+
+/* ====================================================== */
+/* ヘッダー */
+/* ====================================================== */
 .header {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
 }
 
 .header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
 }
 
 .header-logo {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-right: 20px;
-  letter-spacing: .05em;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-right: 20px;
+    letter-spacing: .05em;
 }
 
 .header-logo a {
-  color: #333;
+    color: #333;
 }
 
 .gnav-list {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
 }
 
 .gnav-item:not(:last-child) {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 .gnav-item a {
-  position: relative;
-  font-size: 13px;
-  font-weight: bold;
-  display: inline-block;
-  padding: 5px 0;
-  transition: .3s;
-  letter-spacing: .05em;
-  color: #333;
+    position: relative;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 0;
+    transition: .3s;
+    letter-spacing: .05em;
+    color: #333;
 }
 .gnav-item a:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 3px;
-  content: "";
-  transition: .3s;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background-color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    content: "";
+    transition: .3s;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #333;
 }
 
 .gnav-item a:hover:after {
-  width: 100%;
+    width: 100%;
 }
 
-/*--------------------------------
- メインビジュアル
----------------------------------*/
+/* ====================================================== */
+/* メインビジュアル */
+/* ====================================================== */
 .mv {
-  display: flex;
-  align-items: flex-start; 
-  justify-content: flex-start; 
-  height: auto;
-  text-align: left;
-  background-color: #f9f7f0;
-  padding-left: 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+    text-align: left;
+    background-color: #f9f7f0;
+    padding-left: 80px;
 }
 
 .mv-container {
-  position: relative;
-  padding: 0 20px;
+    position: relative;
+    padding: 0 20px;
 }
 
 .mv-container img {
-  display: block;
-      margin-left: 10%;
-      margin-right: auto;
+    display: block;
+    margin-left: 10%;
+    margin-right: auto;
 }
 
-@media screen and (max-width: 768px){
-  /*  メインビジュアル */
-  .mv {
-    height: 30vh;
-    padding: 0;
-  }
-
-  .mv-container {
-    padding: 0 20px;
-  }
-
-  .mv-title {
-    font-size: 30px;
-  }
-  .mv-subtitle {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  .mv-text {
-    top: 75%;
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-}
-
-/*--------------------------------
- About
----------------------------------*/
+/* ====================================================== */
+/* About セクション */
+/* ====================================================== */
 .about-section {
-  
     display: flex;
-    justify-content: center; /* これで中の about-container が中央寄せされます */
-    align-items: flex-start; /* vertical-align を上揃えに（必要であれば） */
-
-    padding: 80px 10px; /* 上下に余白を追加。左右の10pxは維持。 */
-                        /* もし上部にマージンが欲しい場合は margin-top: 10px; を残しても良いが、
-                           一般的にはセクションの上下の余白はpaddingで調整することが多い */
-    
-    margin-top: 0; /* 不要なマージンをリセット */
-
-
-    background-color: #f9f7f0; /* この背景色がsection全体に適用されます */
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 10px;
+    background-color: #f9f7f0;
 }
 
 .about-container {
@@ -201,158 +182,79 @@ img {
     align-items: flex-start;
     gap: 40px;
     max-width: 1000px;
-    width: 100%; /* これが重要。中の要素がmax-width:1000pxまで広がる */
-    /* margin: 0 auto; は justify-content: center; がflexboxで適用されるので不要 */
-}
-.about-wrapper {
-        display: flex; /* Flexコンテナにする */
-        flex-direction: column; /* 子要素を縦方向に並べる */
-        align-items: center; /* 子要素を中央寄せにする */
-        width: 100%; /* 親要素の幅いっぱいに広げる */
-        max-width: 800px; /* 必要であれば最大幅を設定 */
-        margin: 0 auto; /* block要素を中央寄せにする */
-    }
-.right-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1; /* 残りのスペースを占める */
+    width: 100%;
 }
 
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
 .profile {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
 }
+
 .profile-img {
-  flex-shrink: 1; 
-  margin-top: 0;
-  padding-top: 20px;
-  margin-right: 30px;
-  margin-top: 150px;
+    flex-shrink: 1;
+    margin-top: 150px; /* PC版の高さ調整 */
+    margin-right: 30px;
 }
+
 .profile-img img {
-  width: 200px; /* 適宜調整 */
-  height: auto;
-  display: block;
-   order: 1;
-  flex: 1; /* 左の幅調整 */
-  
+    width: 200px; /* PCでの画像サイズ */
+    height: auto;
+    display: block;
 }
+
 .right-content {
-  order: 2;
-  flex: 1; /* 右の幅調整 */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1; /* 残りのスペースを占める */
 }
+
 .profile-body {
-  flex: 1;
+    flex: 1;
 }
 
 .profile-body p {
-  font-size: 15px;
-  line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.8;
 }
 
 .profile-body p:not(:last-child) {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
+
 .designer-info {
-  display: flex;
-  align-items: flex-start;
-  margin-top: 20px;
-  gap: 10px;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 10px;
 }
 
 .red-line {
-  width: 4px;
-  height: 2.2em; /* 約2行分の高さ */
-  background-color: red;
+    width: 4px;
+    height: 2.2em;
+    background-color: red;
 }
 
 .designer-text {
-  font-size: 10px;
-  line-height: 1.4;
-  color: #333;
-}
-/* モバイル時の切り替え */
-@media screen and (max-width: 768px) {
-  .about-container {
-    flex-wrap: wrap;
-    flex-direction: column; /* 縦積みにする */
-  }
-
-  /* profile-imgを先に */
-  .profile-img {
-    order: 1;
-    width: 100%;
-  }
-
-  /* right-contentをprofile-imgの後に */
-  .right-content {
-    order: 2;
-    width: 100%;
-  }
-  .right-content{padding: 20px;}
-  .about-section {margin-bottom: 0;
-    padding: 40px 20px; /* 上下の余白を調整 */
-    background-color: #f9f7f0; /* 背景色を維持 */
-  }
-}
-/*--------------------------------
-  Works
----------------------------------*/
-
-/* works-title-img の共通スタイル */
-.works-title-img {
-    height: auto;
-    /* margin-top: 20px; は削除または調整 */
+    font-size: 10px;
+    line-height: 1.4;
+    color: #333;
 }
 
-/* デスクトップ用画像のデフォルトサイズ */
-.works-title-img.desktop-only {
-    width: 0px; /* デスクトップでのサイズ */
-    display: block; /* PCでは表示 */
-    margin-left: 0; /* 左寄せ */
-    margin-right: auto; /* 右に余白を自動で取る */
-}
-
-/* モバイル用画像のデフォルトサイズ */
-.works-title-img.mobile-only {
-    width: 40px; /* モバイルでのデフォルトサイズ（メディアクエリで上書き） */
-    display: none; /* PCでは非表示 */
-}
-
-/* .works-wrapper は skill-wrapper と同じ設定にする */
-.works-wrapper {
-    display: flex;
-    justify-content: space-between; /* 子要素（タイトルとコンテンツ）を両端に寄せます */
-    align-items: flex-start; /* 子要素の垂直方向の開始位置を揃えます */
-    background-color: #f9f7f0; /* Worksセクション全体の背景色 */
-    max-width: 1200px;
-    margin: 0 auto; /* works-wrapper 自体を中央寄せ */
-    padding: 20px 20px; /* .works-wrapper 自体の内側の余白 */
-    gap: 40px; /* 子要素間の間隔 */
-    flex-wrap: wrap; /* 画面が狭いときに折り返します */
-}
-
-/* .works-title-side は skill-title-side と同じ設定にする */
-.works-title-side {
-    flex-shrink: 0; /* 縮小しない */
-    margin-right: 10px; /* 右側に余白 */
-    margin-top: 0; /* 必要であれば調整 */
-    /* width: 50px; /* デスクトップの画像幅に合わせる */
-}
-
-/* Worksコンテンツ全体を囲むコンテナ */
-.works-content-container {
-    flex-grow: 1; /* ★★★ 残りのスペースを全て占めるようにする（最重要） ★★★ */
-    /* flex-basis: 0; を追加すると、flex-grow との組み合わせでより効果的 */
-    flex-basis: 0; 
-    /* max-width: を設定しないことで、flex-grow が残りの幅を全て使うようになります */
-}
-
-/* section.works は works-content-container の子として、その中でコンテンツを配置します */
+/* ====================================================== */
+/* Works セクション */
+/* ====================================================== */
 .works.section {
     width: 100%; /* 親 (.works-content-container) の幅いっぱいを使う */
     display: flex; /* これで中の .works-list を配置できます */
@@ -361,22 +263,67 @@ img {
     align-items: flex-start; /* コンテンツを左寄せにする */
     padding: 0; /* 親の works-content-container でパディングを制御するのでここではリセット */
     margin: 0; /* セクション自体のマージンをリセット */
+    background-color: #f9f7f0; /* Worksセクション全体の背景色 */
+}
+
+/* .works-wrapper は skill-wrapper と同じ設定にする */
+.works-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* .works-title-side は skill-title-side と同じ設定にする */
+.works-title-side {
+    flex-shrink: 0;
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+/* works-title-img の共通スタイル */
+.works-title-img {
+    height: auto;
+}
+
+/* デスクトップ用画像のデフォルトサイズ */
+.works-title-img.desktop-only {
+    width: 40px; /* デスクトップでのサイズ */
+    display: block; /* PCでは表示 */
+    margin-left: 0;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+/* モバイル用画像のデフォルトサイズ */
+..works-title-img.mobile-only {
+    width: 40px; /* モバイルでのデフォルトサイズ（メディアクエリで上書き） */
+    display: none; /* PCでは非表示 */
+}
+
+/* Worksコンテンツ全体を囲むコンテナ */
+.works-content-container {
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 /* 既存の .works-item, .works-list, .works-img img などのスタイルはそのまま活用します */
-.works-item {
-    flex: 0 1 calc((100% - 80px) / 3); /* 3列表示の計算。Worksリストの幅が100%ならこれでOK */
-    box-sizing: border-box;
-    color: #333;
-    /* max-width: 300px; /* 個々のアイテムの最大幅。これが広すぎると3列にならないことがある */
-    margin: 0 auto; /* これが中央寄せの原因なので、必要なければ削除 */
-}
 .works-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px; /* アイテム間の隙間 */
-    justify-content: flex-start; /* ★★★ 作品リストを左寄せにする（最重要） ★★★ */
-    width: 100%; /* 親の .works.section (または .works-content-container) の幅に合わせる */
+    gap: 40px;
+    justify-content: flex-start; /* 作品リストを左寄せにする */
+    width: 100%;
+}
+
+.works-item {
+    flex: 0 1 calc((100% - 80px) / 3); /* 3列表示の計算 (gap 40px * 2) */
+    box-sizing: border-box;
+    color: #333;
 }
 
 .works-item:hover {
@@ -406,289 +353,128 @@ img {
     margin-top: 5px;
 }
 
-
-/* --- ここからメディアクエリ内の設定 --- */
-
-/* --- モバイル表示時のスタイル調整（767px以下）--- */
-@media screen and (max-width: 767px) {
-    /* .works-wrapper を縦積みに変更 */
-    .works-wrapper {
-        flex-direction: column;
-        justify-content: flex-start; /* タイトルを左寄せ */
-        align-items: flex-start; /* タイトルを左寄せ */
-        padding-left: 20px;
-        padding-right: 20px;
-        gap: 20px;
-    }
-
-    /* .works-title-side (モバイルでのタイトルの親要素) */
-    .works-title-side {
-        width: 100%; /* モバイルでは幅いっぱい */
-        margin-right: 0;
-        display: flex;
-        justify-content: flex-start; /* 画像を左寄せ */
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    /* .works-title-img.mobile-only の調整 */
-   .works-title-img.mobile-only {
-        display: block;
-        width: 350px; /* ★ここを350pxに固定！ */
-        max-width: 350px; /* ★ここも350pxに固定！ */
-        height: auto;
-        margin-left: 0;
-        margin-right: auto; /* 必要であれば auto のままにし、中央寄せにする */
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    /* .works-title-img.desktop-only はモバイルでは非表示 */
-    .works-title-img.desktop-only {
-        display: none !important;
-    }
-
-    /* .works-content-container もモバイルで調整 */
-    .works-content-container {
-        width: 100%;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    /* 作品一覧 (.works-list) の調整 */
-    .works-list {
-        justify-content: center; /* モバイルでは作品リストを中央寄せ */
-        gap: 30px;
-        width: 100%;
-        max-width: none;
-        padding: 0;
-        margin: 0 auto;
-    }
-
-    /* 各作品アイテム (.works-item) の調整 */
-    .works-item {
-        flex: 0 1 100%;
-        max-width: 400px; /* 各アイテムの最大幅を調整 */
-        margin: 0 auto 30px;
-    }
-
-    /* works.section の調整 (モバイル) */
-    .works.section {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
+/* ====================================================== */
+/* Skill セクション */
+/* ====================================================== */
+.skill {
+    background-color: #f9f7f0; /* Skillセクションの背景色 */
 }
-
-/* --- PC表示時のスタイル調整（768px以上）--- */
-/* --- PC表示時のスタイル調整（768px以上）--- */
-@media screen and (min-width: 768px) {
-    /* PC表示時はdesktop-only画像を表示 */
-    .works-title-img.desktop-only {
-        display: block !important;
-        width: 40px; /* ★ここを40pxに修正！ */
-        height: auto;
-        margin-left: 0; /* 左寄せ */
-        margin-right: auto; /* 右に余白を自動で取る */
-        margin-top: 20px;
-    }
-
-    /* PC表示時はmobile-only画像を確実に非表示 */
-    .works-title-img.mobile-only {
-        display: none !important;
-    }
-
-    /* .left のスタイルはもう使わないので非表示に */
-    .left {
-        display: none;
-    }
-
-    /* PC表示時の works.section のスタイル */
-    .works.section {
-        justify-content: flex-start; /* コンテンツを左寄せ */
-        align-items: flex-start; /* コンテンツを左寄せ */
-    }
-    /* PC表示時の .works-list や .works-item は既存のグローバル定義が適用されるはず */
-}
-/*--------------------------------
- Skill
----------------------------------*/
 
 .skill-wrapper {
-  display: flex;
-  justify-content: space-between;
-   max-width: 1200px; /* 余裕をもって */
-  margin: 0 auto; /* 中央寄せ */
-  padding-left: 20px;
-  align-items: flex-start; /* ← 行頭揃え */
-  gap: 40px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
 }
+
 .skill-title-side {
-  flex-shrink: 0;          /* 縮小しない */
-  margin-right: 10px;      /* 右側に余白を追加 */
-   margin-top: 0; /* 高さ揃えのため */
+    flex-shrink: 0;
+    margin-right: 10px;
+    margin-top: 0;
 }
+
 .skill-title-img {
-  width: 40px;             /* 固定サイズ（例：60px） */
-  height: auto;
-  display: block;
+    width: 40px;
+    height: auto;
+    display: block;
 }
+
 /* PC表示ではdesktop-onlyを表示、mobile-onlyを非表示に */
 .skill-title-img.desktop-only {
-    display: block; /* PCでは表示 */
-    width: 40px; /* PCでの画像の幅 (調整してください) */
-    /* 必要であれば、PCでの中央寄せなどを設定 */
+    display: block;
+    width: 40px;
     margin-left: auto;
     margin-right: auto;
 }
+
 .skill-title-img.mobile-only {
-    display: none; /* PCでは非表示 */
+    display: none;
 }
 
 .skill-title-text {
-  font-size: 24px;
-  font-weight: bold;
-}
-/* works-list と似た2〜3列レイアウトに */
-.skill-list {
- display: flex;
-  flex-wrap: wrap;
-  gap: 40px 20px;
-  flex: 1; /* 残りのスペースを使う */
-  max-width: 100%;
-  box-sizing: border-box;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-/* skill-item を works-item に似せる */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+    flex: 1;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 .skill-item {
-   width: 48%;
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
+    width: 48%; /* 2列表示の基本 */
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .skill-img {
-  width: 60px;
-  height: auto;
-  margin-right: 20px;
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
 }
 
 .skill-body {
-  flex: 1;
+    flex: 1;
 }
 
 .skill-name {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .skill-text {
-  font-size: 14px;
-  line-height: 1.8;
+    font-size: 14px;
+    line-height: 1.8;
 }
-/* --- モバイル表示時のスタイル調整（767px以下）--- */
-@media screen and (max-width: 767px) {
-    /* ... 既存のモバイル用Worksセクションのスタイル ... */
 
-    /* Skillセクションのタイトル画像調整 */
-    .skill-title-img.desktop-only {
-        display: none !important; /* モバイルでは確実に非表示 */
-    }
-
-    .skill-title-img.mobile-only {
-        display: block !important;
-        width: 350px; /* ★ここも350pxに固定！ */
-        max-width: 350px; /* ★ここも350pxに固定！ */
-        height: auto;
-        margin-left: 0;
-        margin-right: auto; /* 必要であれば auto のままにし、中央寄せにする */
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    /* skill-title-side の調整 (親要素として) */
-    .skill-title-side {
-        width: 100%; /* 親の幅いっぱいに広げる */
-        margin: 0; /* 不要なマージンをリセット */
-        display: flex; /* flexコンテナにする */
-        justify-content: flex-start; /* 左寄せ */
-        align-items: center; /* 縦方向中央寄せ（必要であれば） */
-    }
-
-    /* .skill-wrapper 全体の調整（必要であれば） */
-    .skill-wrapper {
-        flex-direction: column; /* 縦並びにする */
-        align-items: center; /* コンテンツ全体を中央寄せ（必要であれば） */
-        padding: 0 20px; /* 左右のパディングを追加 */
-        gap: 20px; /* アイテム間の隙間を調整 */
-            padding-top: 0px;
-    }
-
-  }
-
-
-/*--------------------------------
- Contact
----------------------------------*/
-.contact-list a {
-    margin-right: 20px; /* 間隔の調整 */
-    display: inline-block;
-  }
-  
-
-  .contact-list a:last-child {
-    margin-right: 0; /* 最後の要素に余分なマージンをつけない */
-  }
+/* ====================================================== */
+/* Contact セクション */
+/* ====================================================== */
 .contact {
-  text-align: center;
- padding: 30px 0 !important;
+    text-align: center;
+    padding: 30px 0;
 }
 
-.contact-item:not(:last-child) {
-  margin-right: 10px;
+.contact-list a {
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.contact-list a:last-child {
+    margin-right: 0;
 }
 
 .contact-text {
-  margin-top: 0px;
-}
-.lead a {
-  color: #0066cc;
-  text-decoration: none;
+    margin-top: 0px;
 }
 
-p.lead a:visited {
-  color: #990099;
-}
-
-.lead a:hover {
-  text-decoration: underline;
-}
-
-/*--------------------------------
- お問い合わせフォーム
----------------------------------*/
-.contact-bg img {
-  display: block;
-  margin: 0 auto;
-}
+/* お問い合わせフォーム */
 .contact-bg {
     background: #f9f7f0;
     padding: 20px 0;
     margin: 20px auto 0;
 }
- 
+
 .contact-message {
     text-align: center;
     font-size: 14px;
     line-height: 2;
     margin-bottom: 50px;
 }
- 
+
 .message-notice {
     color: #c10811;
     font-size: 14px;
 }
- 
+
 .essential {
     background: #c10811;
     color: #fafafa;
@@ -697,7 +483,7 @@ p.lead a:visited {
     font-weight: normal;
     margin-left: 10px;
 }
- 
+
 .contact-area {
     background: #fafafa;
     padding: 90px;
@@ -705,11 +491,11 @@ p.lead a:visited {
     width: 1000px;
     margin-top: 0;
 }
- 
+
 .contact-table {
     width: 100%;
 }
- 
+
 .table-list {
     display: flex;
     justify-content: space-between;
@@ -718,22 +504,22 @@ p.lead a:visited {
     width: 100%;
     margin-bottom: 40px;
 }
- 
+
 .table-list th {
     font-size: 13px;
     font-weight: bold;
     width: 250px;
     text-align: left;
 }
- 
+
 .table-list-address {
     flex-wrap: wrap;
 }
- 
+
 .table-list-address .input-area {
     margin-bottom: 10px;
 }
- 
+
 .input-area {
     font-family: 'Noto Sans JP', sans-serif;
     letter-spacing: 0.05em;
@@ -744,57 +530,57 @@ p.lead a:visited {
     box-sizing: border-box;
     border: 1px solid #c4c4c4;
 }
- 
+
 .table-list td {
     font-size: 13px;
     width: calc(100% - 250px);
 }
- 
+
 input::placeholder {
     color: #bfbfbf;
     font-size: 12px;
     font-weight: bold;
 }
- 
+
 textarea {
     border: none;
     width: 550px;
     height: 200px;
     padding: 0;
     border: 1px solid #c4c4c4;
-    resize: vertical; /* 横方向のみサイズを固定する */
+    resize: vertical;
 }
- 
+
 textarea::placeholder {
     color: #bfbfbf;
     font-size: 12px;
 }
- 
+
 input[type="text"] {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
- 
+
 .contact-area .text {
     font-size: 13px;
     text-align: center;
     margin-bottom: 100px;
 }
- 
+
 .contact-area .text a {
     color: #000;
     border-bottom: 1px solid #000;
     transition: all .3s;
     text-decoration: none;
 }
- 
+
 .contact-area .text a:hover {
     border-bottom: 1px solid #777;
     padding-bottom: 5px;
     color: #777;
 }
- 
+
 .submit-button {
     box-sizing: border-box;
     position: relative;
@@ -812,395 +598,506 @@ input[type="text"] {
     transition: all .5s;
     padding: 20px 100px;
 }
- 
+
 .submit-button:hover {
     background: #cae1e3;
     color: #000;
     border: 1px solid #cae1e3;
 }
- 
- 
-@media(max-width:1200px) {
-    .contact-area {
-        width: 80%;
-        padding: 60px;
-    }
-}
- 
-@media(max-width:1024px) {
-    .contact-area {
-        padding: 50px 15px;
-    }
- 
-    .table-list th {
-        width: 180px;
-    }
- 
-    .table-list td {
-        width: 100%;
-    }
- 
-    .input-area {
-        width: 500px;
-        height: 40px;
-    }
- 
-    textarea {
-        width: 500px;
-        height: 200px;
-    }
- 
-    .contact-message {
-        margin-bottom: 30px;
-    }
- 
-    .contact-area .text {
-        margin-bottom: 30px;
-    }
-}
- 
- 
-@media(max-width:834px) {
-    .contact-bg {
-        margin: 50px auto 0;
-        padding: 50px 0;
-    }
- 
-    .contact-area {
-        margin: 50px auto;
-        padding: 50px 20px;
-    }
- 
-    .check-box label {
-        width: 100%;
-    }
- 
-    .input-area {
-        width: 100%;
-        height: 30px;
-    }
- 
-    textarea {
-        width: 100%;
-        height: 200px;
-    }
- 
-    .table-list {
-        flex-wrap: wrap;
-        margin-bottom: 20px;
-    }
- 
-    .table-list th {
-        font-size: 12px;
-        width: 200px;
-        margin-bottom: 10px;
-    }
- 
-    .table-list td {
-        font-size: 12px;
-    }
- 
-    .table-list td {
-        width: 100%;
-    }
- 
-    .contact-message {
-        font-size: 13px;
-    }
- 
-    .contact-area .text {
-        font-size: 13px;
-    }
-}
- 
-@media (max-width:640px) {
-    .contact-message {
-        text-align: left;
-    }
- 
-    .contact-area .text {
-        text-align: left;
-    }
-}
- 
-@media(max-width:320px) {
-    .input-area {
-        width: 100%;
-    }
- 
-    textarea {
-        width: 100%;
-    }
-}
 
-/*--------------------------------
- フッター
----------------------------------*/
+/* ====================================================== */
+/* フッター */
+/* ====================================================== */
 .footer {
-  padding: 30px;
-  background-color: #333;
-  width: 100%; /* フッターを画面幅いっぱいに広げる */
-  box-sizing: border-box; /* paddingを含めて幅100%にする */
-  /* text-align: center; /* フッター内のインライン要素を中央寄せするためにも有効 */
+    padding: 30px;
+    background-color: #333;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .copyright {
-  font-size: 10px;
-  text-align: center; /* .copyright内のテキストを中央寄せ */
-  color: #797979;
+    font-size: 10px;
+    text-align: center;
+    color: #797979;
 }
 
-/*--------------------------------
- 下層：Worksページ
----------------------------------*/
-
+/* ====================================================== */
+/* 下層：Worksページ */
+/* ====================================================== */
 .content {
-  background-color: #f9f7f0;
+    background-color: #f9f7f0;
 }
+
 .article {
-  padding: 50px 0;
+    padding: 50px 0;
 }
 
 .article-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .article-title {
-  margin-bottom: 30px;
-  text-align: center;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-* 既存の .article-body のスタイルを調整 */
+/* 最初の .article-body (説明テキストとモックアップ画像) */
 .article-body {
-  max-width: 1000px; /* 例えば、最大幅を900pxにする */
-  margin: 0 auto; /* 中央寄せ */
-  margin-bottom: 80px; /* 下部マージンを維持 */
-  /* 必要に応じて padding を追加することも検討 */
-  padding: 0 20px; /* 左右に少しパディングを持たせる（コンテンツが端に寄りすぎないように） */
-  box-sizing: border-box; /* padding を含めて幅を計算 */
+    max-width: 1000px;
+    margin: 0 auto 80px auto; /* 中央寄せ＆下マージン */
+    padding: 0 20px; /* 左右にパディング */
+    box-sizing: border-box;
 }
 
-/* article-body内の画像サイズ調整 */
-.article-body img {
-  width: 100%; /* 親要素(article-body)の幅に合わせる */
-  height: auto;
-  display: block;
+/* article-body内の画像サイズ調整 (モックアップ画像など、最初の.article-body直下の画像) */
+/* HTML構造: <div class="article-body"><p><a href="#"><img ...></a></p> */
+.article-body > p > a > img { /* セレクタの特異性を高める */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px auto; /* 中央寄せ＆下マージン */
 }
+/* ただし、alt="mockup" を持つ画像はさらに特定のセレクタで上書きします。 */
+/* これはモバイルで特定するためなので、PC版では上のルールが適用されるはずです。 */
 
-/* 横並びブロック全体を囲むFlexコンテナ (pc_cafe_top.png などを含む部分) */
+
+/* 横並びブロック全体を囲むFlexコンテナ (PC/SP画像群を含む部分) */
 .article-flex {
-  display: flex;
-  gap: 20px; /* カラム間の間隔 */
-  max-width: 1200px; /* article-containerと同じ幅に制限 */
-  margin: 0 auto; /* 中央寄せ */
-  padding: 0 20px; /* Flexコンテナ内の左右の余白 */
-  box-sizing: border-box;
-  flex-wrap: wrap; /* 画面が狭くなったときに折り返す */
-  align-items: flex-start; /* 各カラムの上端を揃える */
+    display: flex;
+    gap: 20px; /* カラム間の間隔 */
+    max-width: 1300px; /* article-containerと同じ幅に制限 */
+    margin: 0 auto; /* 中央寄せ */
+    padding: 0 20px; /* Flexコンテナ内の左右の余白 */
+    box-sizing: border-box;
+    flex-wrap: wrap; /* 画面が狭くなったときに折り返す */
+    align-items: flex-start; /* 各カラムの上端を揃える */
 }
 
 /* 左側（PC画像群）のコンテンツブロック (.article-flex 内の .article-body) */
-/* ここが、WorksページのレイアウトでPCとSP画像を横並びにしている部分かと思います。 */
-/* このブロックの幅も調整が必要です。 */
-.article-flex > .article-body { /* より具体的に指定 */
-  /* flex-basis: 400px; と max-width: 400px; を調整 */
-  flex-basis: 600px; /* 例えば、PC画像群の基本幅を500pxにする */
-  max-width: 600px;  /* 最大幅も500pxにする */
-  flex-shrink: 1;
-  flex-grow: 1; /* 余ったスペースを占めるようにする */
-  margin: 0; /* 親のflexコンテナでマージンを制御するためリセット */
-  margin-bottom: 80px; /* 下部マージンを維持 */
-  box-sizing: border-box;
-  padding: 0; /* flexアイテムとして機能させるため、ここではパディングをリセット */
+.article-flex > .article-body {
+    flex-basis: 400px; /* 基本幅 */
+    max-width: 400px; /* 最大幅 */
+    flex-shrink: 1;
+    flex-grow: 1;
+    margin-bottom: 80px; /* 下部マージン */
+    box-sizing: border-box;
+    padding: 0; /* Flexアイテムとしてのパディングは個別画像で調整 */
 }
 
-
-/* article-flex > .article-body 内の画像サイズ調整 */
-.article-flex > .article-body img {
-  width: 100%;
-  height: auto;
-  display: block;
-  /* margin-bottom など、必要に応じて追加 */
-  margin-bottom: 30px; /* 画像の下にスペースを追加 */
+/* article-flex > .article-body 内の画像サイズ調整 (PC画像群) */
+/* HTML構造: <div class="article-flex"><div class="article-body"><p><a href="#"><img ...></a></p> */
+.article-flex > .article-body p a img { /* セレクタの特異性を高める */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 30px; /* 画像の下にスペースを追加 */
 }
 
 /* 右側（SP画像群）のコンテンツブロック */
 .article-side {
-  flex-basis: 200px; /* 例えば、SP画像群の基本幅を200pxにする */
-  max-width: 200px;  /* 最大幅も200pxにする */
-  flex-shrink: 1;
-  flex-grow: 1; /* 余ったスペースを占めるようにする */
-  margin: 0; /* 親のflexコンテナでマージンを制御するためリセット */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 0; /* flexアイテムとして機能させるため、ここではパディングをリセット */
+    flex-basis: 200px; /* 基本幅 */
+    max-width: 200px; /* 最大幅 */
+    flex-shrink: 1;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* 中央寄せ */
+    box-sizing: border-box;
+    padding: 0; /* Flexアイテムとしてのパディングは個別画像で調整 */
+    margin-bottom: 80px; /* 下部マージン */
 }
 
-/* article-side内の画像サイズ調整 */
-.article-side img {
-  width: 100%;
-  height: auto;
-  max-width: 300px; /* 親要素の幅に合わせて縮小 */
-  display: block;
-  margin: 0 auto; /* 中央寄せ */
+/* article-side内の画像サイズ調整 (SP画像群) */
+/* HTML構造: <div class="article-side"><p><a href="#"><img ...></a></p> */
+.article-side p a img { /* セレクタの特異性を高める */
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* 親要素の幅に合わせて縮小 */
+    display: block;
+    margin: 0 auto; /* 中央寄せ */
+    margin-bottom: 30px; /* 画像の下にスペースを追加 */
 }
+
 
 /* ネストされた .article-body のh3, pなど */
-/* 最初の .article-body のスタイルはそのまま維持 */
 .article-body h3 {
-  position: relative;
-  font-size: 18px;
-  margin-bottom: 5px;
-  padding-left: 1em;
+    position: relative;
+    font-size: 18px;
+    margin-bottom: 5px;
+    padding-left: 1em;
 }
 
 .article-body h3:not(:first-child) {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .article-body h3::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  content: "";
-  border-radius: 3px;
-  background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    content: "";
+    border-radius: 3px;
+    background-color: #333;
 }
 
 .article-body p {
-  font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 30px;
 }
-
 
 /* Homeへのリンク */
 .home-link {
-  text-align: center;
-  margin-top: 50px; /* 必要であれば上マージンを追加 */
-  margin-bottom: 50px; /* 必要であれば下マージンを追加 */
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Works一覧へ のリンクを中央に配置 */
+.home-link {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Lightbox */
+.lb-image {
+    max-width: none; /* Lightboxの画像を親から引き継ぐのではなく、本来のサイズで表示 */
+    max-height: none;
+}
+
+/* ====================================================== */
+/* メディアクエリ (モバイル表示時の調整: max-width: 768px) */
+/* ====================================================== */
+@media screen and (max-width: 768px) {
+    /* ヘッダーのモバイル調整（以前の議論での最終的な調整をここに入れます） */
+    .header-logo {
+        display: none; /* ロゴを非表示 */
+    }
+    .header .container {
+        justify-content: center; /* ナビ全体を中央に寄せる */
+        padding: 15px 10px;
+    }
+    .gnav-list {
+        /* justify-content: space-around; は維持 */
+        justify-content: space-around; 
+        flex-wrap: nowrap;
+        width: 100%; /* 親のcontainerの幅をフルに使う */
+        
+        /* ここを調整！ */
+        /* gap は space-around と併用すると予期せぬ挙動になることがあるので、
+           今回は `margin-right` を使って調整します。
+           もし justify-content: flex-start; に変更するなら gap が有効です。
+        */
+        gap: 0; /* 念のため gap は0のままにするか、削除 */
+    }
+
+    /* 個々のナビゲーションアイテムの間隔調整 */
+    .gnav-item {
+        /* flex-grow: 1; は、アイテムが余ったスペースを均等に広がるために維持 */
+        flex-grow: 1; 
+        text-align: center; /* 各アイテム内のテキストを中央揃え */
+
+        /* ここを調整！ */
+        /* アイテム間に適切なマージンを設定し、ぎゅうぎゅう感を解消します */
+        margin-right: 20px !important; /* ★アイテム間の右マージン (5pxなど、適宜調整) */
+    }
+    /* 最後のアイテムの右マージンは不要なのでリセット */
+    .gnav-item:last-child {
+        margin-right: 0 !important; 
+    }
+
+
+    /* ナビゲーションリンクのフォントサイズとパディング */
+    .gnav-item a {
+        font-size: 11px; /* ナビゲーションリンクのフォントサイズを調整 */
+        padding: 5px 0; /* リンクのパディングを上下に少し増やしてクリックしやすく */
+        white-space: nowrap; /* テキストが改行されないように */
+        display: block; /* paddingやwidthが適用されるようにブロック要素にする */
+    }
+
+    /* Instagramアイコンの調整 */
+    .gnav-item img {
+        width: 15px; /* アイコンのサイズを調整 */
+        height: auto;
+        vertical-align: middle;
+    }
+
+
+    /* メインビジュアル */
+    .mv {
+        height: 30vh;
+        padding: 0;
+    }
+    .mv-container {
+        padding: 0 20px;
+    }
+    .mv-title {
+        font-size: 30px;
+    }
+    .mv-subtitle {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .mv-text {
+        top: 75%;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* About セクション */
+    .about-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .profile-img {
+        order: 1;
+        width: 100%;
+        margin-top: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+    .profile-img img {
+        width: 200px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .right-content {
+        order: 2;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .about-section {
+        padding: 40px 20px;
+        margin-bottom: 0;
+    }
+
+    /* Worksセクション */
+    .works-wrapper {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 20px;
+    }
+    .works-title-side {
+        width: 100%;
+        margin-right: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .works-title-img.mobile-only {
+        display: block;
+        width: 350px;
+        max-width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .works-title-img.desktop-only {
+        display: none;
+    }
+    .works-content-container {
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .works-list {
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .works-item {
+        flex: 0 1 100%;
+        max-width: 400px;
+        margin: 0 auto 30px;
+    }
+    .works.section {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    /* Skillセクション */
+    .skill-title-img.desktop-only {
+        display: none;
+    }
+    .skill-title-img.mobile-only {
+        display: block;
+        width: 350px;
+        max-width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .skill-title-side {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .skill-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+        gap: 20px;
+        padding-top: 0px;
+    }
+    .skill-item {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    .skill-img {
+        width: 60px;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+    .skill-body {
+        flex: 1;
+    }
+
+    /* Contactフォーム */
+    .contact-area {
+        width: 80%;
+        padding: 50px 20px;
+        margin: 50px auto;
+    }
+    .table-list {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    .table-list th {
+        font-size: 12px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .table-list td {
+        font-size: 12px;
+        width: 100%;
+    }
+    .input-area {
+        width: 100%;
+        height: 30px;
+    }
+    textarea {
+        width: 100%;
+        height: 200px;
+    }
+    .contact-message, .contact-area .text {
+        font-size: 13px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+    .submit-button {
+        padding: 15px 50px;
+    }
+    /* ネストされたメディアクエリは、もし不要であれば削除してください */
+    @media (max-width: 320px) {
+        .input-area, textarea {
+            width: 100%;
+        }
+    }
+
+    /* ====================================================== */
+    /* 下層 Worksページ (.article) のモバイル対応 - ここを元に戻す */
+    /* ====================================================== */
+    
+    .article-container,
+    .article-body,
+    .article-flex {
+        
+        max-width: 300px; /* ★もしPCで小さくなるなら、ここが原因の一つ */
+        padding: 0;
+    }
+    /* 画像のmax-widthも同様 */
+    .article-body > p > a > img[alt="mockup"],
+    .article-flex > .article-body p a img,
+    .article-side p a img {
+        max-width: 300px;
+    }
+
+} /* ★★★ ここに閉じ括弧 `}` を追加してください！ ★★★ */
+
+
+/* ====================================================== */
+/* メディアクエリ (PC表示時の調整: min-width: 769px) */
+/* ====================================================== */
+@media screen and (min-width: 769px) {
+    /* works-title-img のPC表示設定 */
+    .works-title-img.desktop-only {
+        display: block;
+    }
+    .works-title-img.mobile-only {
+        display: none;
+    }
+    /* ... 続くPC用スタイル ... */
+
+    /* PC表示時にarticleの幅を制御するスタイルをここに明示的に記述する */
+    /* これがあれば、モバイルのmax-widthが漏れても上書きされます */
+    .article-container {
+        max-width: 1200px; /* 例: PC表示時の適切な最大幅 */
+        padding: 0 20px; /* 例: PC表示時の適切なパディング */
+    }
+    .article-body {
+        max-width: 1000px; /* 例: PC表示時の適切な最大幅 */
+        padding: 0 20px;
+    }
+    .article-flex {
+        max-width: 1300px; /* 例: PC表示時の適切な最大幅 */
+        padding: 0 20px;
+    }
 }
 
 
 /* ====================================================== */
-/* モバイル対応（メディアクエリ） */
+/* ページトップ */
 /* ====================================================== */
-@media screen and (max-width: 768px) { /* モバイルデバイスのブレイクポイント */
-
-  /* メインコンテンツ全体の幅（モバイル） */
-  main.content {
-    max-width: 100% !important; /* モバイルでは幅100% */
-    padding: 0 15px !important; /* 左右の余白を調整 */
-  }
-
-  /* フッターの幅（モバイル） */
-  .footer {
-    max-width: 100% !important;
-  }
-
-  /* article-body内の画像（cafemock.png）の幅調整 (モバイル) */
-  .article-body > p > img[alt="mockup"] {
-    max-width: 100% !important;
-    margin-bottom: 30px !important;
-  }
-
-
-  /* article-flex を縦並びにする */
-  .article-flex {
-    flex-direction: column !important;
-    gap: 30px !important;
-    padding: 0 !important; /* 親の.article-container/contentでパディングがあるため、ここではリセット */
-  }
-
-  /* article-flex内の article-body と article-side のモバイルでの幅調整 */
-  .article-flex > .article-body, /* より具体的に指定 */
-  .article-side {
-    width: 100% !important;
-    max-width: 500px !important; /* スマホでの最大幅（必要に応じて調整） */
-    margin: 0 auto !important; /* 中央寄せ */
-    flex-basis: auto !important; /* モバイルでは自動調整 */
-    flex-grow: 1 !important;
-  }
-
-  /* article-flex > .article-body 内の画像サイズ調整 (モバイル) */
-  .article-flex > .article-body img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 500px !important;
-    margin: 0 auto !important;
-  }
-
-  /* article-side内の画像サイズ調整 (モバイル) */
-  .article-side img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 300px !important;
-    margin: 0 auto !important;
-  }
-
-  /* article-bodyの下部マージンもモバイルで調整が必要なら */
-  .article-body {
-    margin-bottom: 30px !important;
-  }
-}
-
-/*--------------------------------
- ページトップ
----------------------------------*/
-
-
- /* style.css?_…84829967:15 (既存のimgスタイルより後に記述) */
-
-.page-top-img {
-  display: block;
-  margin: 0 auto;
-}
-
 .page-top {
-  position: fixed; /* 画面に固定 */
-  bottom: 20px;    /* 画面下から20pxの位置 */
-  right: 20px;     /* 画面右から20pxの位置 */
-  z-index: 1000;   /* 他の要素より手前に表示するために高いz-indexを設定 */
-  width: 50px;     /* ボタンの幅を固定 (画像サイズに合わせて調整) */
-  height: 50px;    /* ボタンの高さを固定 (画像サイズに合わせて調整) */
-  display: flex;   /* 中の画像を中央寄せするためにflexboxを使う */
-  justify-content: center; /* 横方向中央寄せ */
-  align-items: center;     /* 縦方向中央寄せ */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .page-top-img {
-  display: block; /* 画像をブロック要素にする */
-  max-width: 100%; /* 親要素の幅に合わせて縮小 */
-  height: auto;    /* 縦横比を維持 */
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-/* メディアクエリは、希望する表示挙動に合わせて調整してください */
-@media screen and (max-width: 767px) {
-    /* モバイルで表示しない場合は、このセクションをコメントアウトするか、display: none; を追加 */
+/* ページトップのモバイル表示制御 */
+@media screen and (max-width: 768px) {
+    /* モバイルで非表示にする場合は以下を有効にする */
     /* .page-top { display: none; } */
 }
 
-@media screen and (min-width: 768px) {
+/* PC表示時のページトップ */
+@media screen and (min-width: 769px) {
     .page-top {
         display: flex; /* PCで確実に表示させる */
     }
-}
-/*--------------------------------
- 各セクションの背景色
----------------------------------*/
-
-.skill {
-    background-color: #f9f7f0; /* Skillセクションの背景色 */
-}
-/* style.css のどこか、LightboxのCSSの後に読み込まれる場所に追記 */
-.lb-image {
-  max-width: none !important;
-  max-height: none !important;
 }
