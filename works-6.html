@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>KAWA Works</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
- <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
-<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>KAWA Works</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type='text/javascript' src="js/script.js"></script>
 </head>
+
 
 <body>
   <div class="wrapper">
 
-    <!-- header -->
+   <!-- header -->
    <header class="header ">
   <div class="container">
     <h1 class="header-logo">
-      <a href="/">KAWA Works</a> </h1>
+      <a href="/portfolio/index.html">KAWA Works</a> 
+    </h1> 
     <nav class="gnav">
     <ul class="gnav-list">
-        <li class="gnav-item"><a href="/#top">TOP</a></li>
-        <li class="gnav-item"><a href="/#about">ABOUT</a></li>    
-        <li class="gnav-item"><a href="/#works">WORKS</a></li>    
-        <li class="gnav-item"><a href="/#skill">SKILL</a></li>    
-        <li class="gnav-item"><a href="/#contact">CONTACT</a></li> 
-        <li class="gnav-item"> <a href="https://www.instagram.com/palo_sant4.5/" target="_blank">
+      <li class="gnav-item"><a href="/portfolio/index.html#top">TOP</a></li>     
+      <li class="gnav-item"><a href="/portfolio/index.html#about">ABOUT</a></li>   
+      <li class="gnav-item"><a href="/portfolio/index.html#works">WORKS</a></li>   
+      <li class="gnav-item"><a href="/portfolio/index.html#skill">SKILL</a></li>   
+      <li class="gnav-item"><a href="/portfolio/index.html#contact">CONTACT</a></li> 
+      <li class="gnav-item"> <a href="https://www.instagram.com/palo_sant4.5/" target="_blank">
           <img src="img/icon_instagram.png" alt="mail">
         </a></li>
-      </ul>
+    </ul>
     </nav>
   </div>
 </header>
@@ -69,21 +77,32 @@
             </p>
            
            
-          <div class="home-link">
+         <div class="home-link">
             <a href="index.html#works">Works一覧へ</a>
           </div>
         </div>
       </article>
 
-      </section> </main> <div class="page-top" id="js-page-top">
+      </section> 
+    </main> 
+      <div class="page-top" id="js-page-top">
         <img src="img/toppage.png" alt="ページトップへ" class="page-top-img">
     </div>
 
     <footer class="footer">
         <div class="copyright">&copy;KAWA Works</div>
     </footer>
-    </div> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </div> 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type='text/javascript' src="js/script.js"></script>
 
+<script>
+  Fancybox.bind("[data-fancybox]", {
+    // オプションは必要であれば追加してください。
+    // 例:
+    // dragToClose: false, // ドラッグで閉じない
+    // Thumbs: { autoStart: false }, // サムネイルを自動表示しない
+  });
+</script>
 </body>
 </html>
