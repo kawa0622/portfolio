@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>KAWA Works</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-   
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
- <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
-<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>KAWA Works</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type='text/javascript' src="js/script.js"></script>
 </head>
 
 <body>
@@ -21,8 +27,13 @@
     <h1 class="header-logo">
       <a href="/">KAWA Works</a> </h1>
     <nav class="gnav">
-      <ul class="gnav-list">
-        <li class="gnav-item"><a href="/#about">ABOUT</a></li>    <li class="gnav-item"><a href="/#works">WORKS</a></li>    <li class="gnav-item"><a href="/#skill">SKILL</a></li>    <li class="gnav-item"><a href="/#contact">CONTACT</a></li> <li class="gnav-item"><a href="/#about">ABOUT</a></li>    <li class="gnav-item"> <a href="https://www.instagram.com/palo_sant4.5/" target="_blank">
+    <ul class="gnav-list">
+        <li class="gnav-item"><a href="/#top">TOP</a></li>
+        <li class="gnav-item"><a href="/#about">ABOUT</a></li>    
+        <li class="gnav-item"><a href="/#works">WORKS</a></li>    
+        <li class="gnav-item"><a href="/#skill">SKILL</a></li>    
+        <li class="gnav-item"><a href="/#contact">CONTACT</a></li> 
+        <li class="gnav-item"> <a href="https://www.instagram.com/palo_sant4.5/" target="_blank">
           <img src="img/icon_instagram.png" alt="mail">
         </a></li>
       </ul>
@@ -65,51 +76,67 @@
 ・WordPressのプラグインを活用し、SEO対策を行う。<br>
             </p>
           <article class="article">
-  <div class="article-container">
-
-    <!-- 横並びにしたいブロック全体を囲む -->
+<div class="article-container">
     <div class="article-flex">
-      <!-- 左側（既存の画像） -->
-      <div class="article-body">
-        <p>
-          <img src="img/works-detail/workcafe/pc_cafe_top.png" alt="top">
-        </p>
-        <p>
-          <img src="img/works-detail/workcafe/PC_cafe_menu.png" alt="menu">
-        </p>
-         <p>
-          <img src="img/works-detail/workcafe/PC_cafe_blog.png" alt="blog">
-        </p>
-        <p>
-          <img src="img/works-detail/workcafe/PC_cafe_blogpage.png" alt="blogpage">
-        </p>
-        <p>
-        <img src="img/works-detail/workcafe/PC_cafe_form.png" alt="aboutus">
-        </p>
-      </div>
+        <div class="article-body">
+          <a data-fancybox="cafe-gallery" href="img/works-detail/workcafe/pc_cafe_top.png" data-caption="PC版 トップページ">
+                                            <img src="img/works-detail/workcafe/pc_cafe_top.png" alt="Test Image">
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <a data-fancybox="cafe-gallery" href="img/works-detail/workcafe/PC_cafe_menu.png" data-caption="カフェサイト PC版 - メニューページ">
+                                            <img src="img/works-detail/workcafe/PC_cafe_menu.png" alt="menu">
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <a data-fancybox="cafe-gallery" href="img/works-detail/workcafe/PC_cafe_blog.png" data-caption="カフェサイト PC版 - ブログ一覧ページ">
+                                            <img src="img/works-detail/workcafe/PC_cafe_blog.png" alt="blog">
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <a data-fancybox="cafe-gallery" href="img/works-detail/workcafe/PC_cafe_blogpage.png" data-caption="カフェサイト PC版 - ブログ詳細ページ">
+                                            <img src="img/works-detail/workcafe/PC_cafe_blogpage.png" alt="blogpage">
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <a data-fancybox="cafe-gallery" href="img/works-detail/workcafe/PC_cafe_form.png" data-caption="カフェサイト PC版 - お問い合わせフォーム">
+                                            <img src="img/works-detail/workcafe/PC_cafe_form.png" alt="aboutus">
+                                        </a>
+                                    </p>
+                                </div>
 
-      <!-- 右側（追加したい画像） -->
-      <div class="article-side">
-        <p>
-          <img src="img/works-detail/workcafe/sp_cafe_top.jpg" alt="top">
-        </p>
-        <p>
-          <img src="img/works-detail/workcafe/sp_cafe_menu.png" alt="menu">
-        </p>
-         <p>
-          <img src="img/works-detail/workcafe/sp_cafe_blog.png" alt="blog">
-        </p>
-        <p>
-          <img src="img/works-detail/workcafe/sp_cafe_blogpage.png" alt="blogpage">
-        </p>
-        <p>
-        <img src="img/works-detail/workcafe/sp_cafe_form.png" alt="form">
-        </p>
-      </div>
-    </div>
-
-  </div>
-</article>
+                                <div class="article-side">
+                                    <p>
+                                        <a data-fancybox="cafe-gallery" href="img/works-detail/workcafe/sp_cafe_top.jpg" data-caption="カフェサイト SP版 - トップページ">
+                                            <img src="img/works-detail/workcafe/sp_cafe_top.jpg" alt="top">
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="article-side">
+                                    <p>
+                                        <a data-fancybox="cafe-gallery" href="img/works-detail/workcafe/sp_cafe_menu.png" data-caption="カフェサイト SP版 - メニューページ">
+                                            <img src="img/works-detail/workcafe/sp_cafe_menu.png" alt="menu">
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <a data-fancybox="cafe-gallery" href="img/works-detail/workcafe/sp_cafe_blog.png" data-caption="カフェサイト SP版 - ブログ一覧ページ">
+                                            <img src="img/works-detail/workcafe/sp_cafe_blog.png" alt="blog">
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <a data-fancybox="cafe-gallery" href="img/works-detail/workcafe/sp_cafe_blogpage.png" data-caption="カフェサイト SP版 - ブログ詳細ページ">
+                                            <img src="img/works-detail/workcafe/sp_cafe_blogpage.png" alt="blogpage">
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <a data-fancybox="cafe-gallery" href="img/works-detail/workcafe/sp_cafe_form.png" data-caption="カフェサイト SP版 - お問い合わせフォーム">
+                                            <img src="img/works-detail/workcafe/sp_cafe_form.png" alt="form">
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
           <div class="home-link">
             <a href="index.html#works">Works一覧へ</a>
           </div>
@@ -123,8 +150,17 @@
     <footer class="footer">
         <div class="copyright">&copy;KAWA Works</div>
     </footer>
-    </div> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </div> 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type='text/javascript' src="js/script.js"></script>
 
+<script>
+  Fancybox.bind("[data-fancybox]", {
+    // オプションは必要であれば追加してください。
+    // 例:
+    // dragToClose: false, // ドラッグで閉じない
+    // Thumbs: { autoStart: false }, // サムネイルを自動表示しない
+  });
+</script>
 </body>
 </html>
